@@ -18,7 +18,7 @@ public:
 	void push(T el);
 	void pop();
 	T &top();
-	bool empty()const;
+	bool empty();
 	void print();
 	Stack<T> operator=(const Stack<T>& obj); //когда конструктор можно не писать <T>, а когда метод то обязательно
 };
@@ -84,7 +84,7 @@ inline T& Stack<T>::top()
 }
 
 template<typename T>
-inline bool Stack<T>::empty() const
+inline bool Stack<T>::empty()
 {
 	return (cur_size==0);
 }
