@@ -37,7 +37,7 @@ inline Stack<T>::Stack(const Stack<T>& obj)
 	cur_size = obj.cur_size;
 	buf_size=obj.buf_size;
 	ptr = new T[buf_size];
-	for (int i = 0; i < cur_size; i++)
+	for (int i = 0; i < obj.cur_size; i++)
 		ptr[i] = obj.ptr[i];
 }
 
@@ -103,6 +103,8 @@ inline Stack<T> Stack<T>::operator=(const Stack<T>& obj)
 	cur_size = obj.cur_size;
 	buf_size = obj.buf_size;
 	ptr = new T[buf_size];
-	for (int i = 0; i < cur_size; i++)
+	for (int i = 0; i < obj.cur_size; i++)
 		ptr[i] = obj.ptr[i];
+
+	return *this;
 }
